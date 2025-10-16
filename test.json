@@ -1,0 +1,52 @@
+{
+  "role": "atlasAdmin",
+  "db": "admin",
+  "isBuiltin": false,
+  "roles": [
+    { "role": "readWriteAnyDatabase", "db": "admin" },
+    { "role": "dbAdminAnyDatabase", "db": "admin" },
+    { "role": "enableSharding", "db": "admin" },
+    { "role": "backup", "db": "admin" },
+    { "role": "clusterMonitor", "db": "admin" }
+  ],
+  "privileges": [
+    { "resource": {}, "actions": ["viewRole"] },
+    { "resource": {}, "actions": ["moveChunk"] },
+    {
+      "resource": { "db": "config", "collection": "system.sessions" },
+      "actions": ["moveChunk"]
+    },
+    { "resource": {}, "actions": ["moveChunk"] },
+    { "resource": {}, "actions": ["splitChunk"] },
+    {
+      "resource": { "db": "config", "collection": "system.sessions" },
+      "actions": ["splitChunk"]
+    },
+    { "resource": {}, "actions": ["splitChunk"] },
+    {
+      "resource": { "db": "config", "collection": "system.sessions" },
+      "actions": ["splitVector"]
+    },
+    { "resource": {}, "actions": ["enableSharding"] },
+    { "resource": {}, "actions": ["enableSharding"] },
+    { "resource": {}, "actions": ["enableSharding"] },
+    { "resource": {}, "actions": ["cleanupOrphaned"] },
+    { "resource": {}, "actions": ["flushRouterConfig"] },
+    { "resource": {}, "actions": ["querySettings"] },
+    { "resource": {}, "actions": ["getClusterParameter"] },
+    { "resource": {}, "actions": ["compact"] },
+    { "resource": {}, "actions": ["analyzeShardKey"] },
+    { "resource": {}, "actions": ["analyzeShardKey"] },
+    { "resource": {}, "actions": ["clearJumboFlag"] },
+    { "resource": {}, "actions": ["clearJumboFlag"] },
+    { "resource": {}, "actions": ["killAnyCursor"] },
+    { "resource": {}, "actions": ["checkMetadataConsistency"] }
+  ],
+  "inheritedRoles": [
+    { "role": "readWriteAnyDatabase", "db": "admin" },
+    { "role": "dbAdminAnyDatabase", "db": "admin" },
+    { "role": "enableSharding", "db": "admin" },
+    { "role": "backup", "db": "admin" },
+    { "role": "clusterMonitor", "db": "admin" }
+  ]
+}

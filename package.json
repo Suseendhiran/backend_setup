@@ -1,0 +1,35 @@
+{
+  "name": "join_us",
+  "version": "1.0.0",
+  "description": "test node mysql",
+  "main": "nodeApp.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node mySqlApp.js",
+    "dev:mySql": "nodemon mySqlApp.js",
+    "dev:mongoose": "nodemon MongoServer/mongoApp.js",
+    "dev:mongo": "nodemon mongoApp.js",
+    "dev:graphQl": "nodemon GraphQlMongo/server.js"
+  },
+  "author": "suseendhiran",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.10.1",
+    "mongodb": "6.19",
+    "mongoose": "^8.19.1",
+    "mysql2": "^3.14.3"
+  },
+  "devDependencies": {
+    "cross-env": "^10.0.0",
+    "nodemon": "^3.1.10"
+  },
+  "volta": {
+    "node": "20.12.2"
+  }
+}
