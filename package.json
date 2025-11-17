@@ -3,27 +3,32 @@
   "version": "1.0.0",
   "description": "test node mysql",
   "main": "nodeApp.js",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node mySqlApp.js",
     "dev:mySql": "nodemon mySqlApp.js",
     "dev:mongoose": "nodemon MongoServer/mongoApp.js",
     "dev:mongo": "nodemon mongoApp.js",
-    "dev:graphQl": "nodemon GraphQlMongo/server.js"
+    "dev:graphQl": "nodemon GraphQlMongo/server.js",
+    "dev:passport": "nodemon PassportAuth/server.js"
   },
   "author": "suseendhiran",
   "license": "ISC",
   "dependencies": {
     "@faker-js/faker": "^9.9.0",
+    "bcrypt": "^6.0.0",
     "body-parser": "^2.2.0",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "express-graphql": "^0.12.0",
+    "express-session": "^1.18.2",
     "graphql": "^15.10.1",
     "mongodb": "6.19",
     "mongoose": "^8.19.1",
-    "mysql2": "^3.14.3"
+    "mysql2": "^3.14.3",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
     "cross-env": "^10.0.0",
