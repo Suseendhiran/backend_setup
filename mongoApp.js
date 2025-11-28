@@ -48,7 +48,7 @@ app.post("/register",(req,res) => {
 })
 
 app.get("/",(_,res) => {
-    const query = 'SELECT COUNT(*) AS count FROM users_no_index'
+    const query = 'SELECT COUNT(*) AS count FROM users'
     connection.query(query,(err,results) => {
         if(err) throw JSON.stringify(err)
         console.log("results",results[0])
